@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Yare Ltd – Transforming Commercial Real Estate with Vision and Precision." />
+    <meta name="author" content="Yare Ltd" />
+    <meta property="og:title" content="Yare Ltd" />
+    <meta property="og:description"
+        content="Explore commercial spaces, property listings, and ongoing projects with Yare Ltd." />
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta name="theme-color" content="#dc2626" />
+
+    <title>Yare Ltd – Commercial Real Estate Projects</title>
+
+    <!-- TailwindCSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+    <!-- Fonts: Playfair Display (for headings) + Inter (for body) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;500&display=swap"
+        rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- Alpine.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <!-- Custom Style Overrides -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .text-primary {
+            color: #dc2626;
+        }
+
+        .text-navy {
+            color: #1a325e;
+        }
+
+        .text-gold {
+            color: #855c12;
+        }
+
+        .bg-primary {
+            background-color: #dc2626;
+        }
+
+        .bg-navy {
+            background-color: #1a325e;
+        }
+
+        .bg-gold {
+            background-color: #855c12;
+        }
+
+        .bg-hero {
+            background-image: url('hero.png');
+
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <!-- Hero Section -->
+    <header class="bg-hero relative h-screen w-full bg-cover bg-center text-white">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+
+
+<!-- Navigation -->
+<nav class="absolute top-0 left-0 w-full px-6 py-6 z-20 text-sm font-medium uppercase" x-data="{ open: false }">
+  <!-- Desktop Menu -->
+  <div class="hidden md:flex justify-between w-full">
+    <div class="flex gap-8">
+      <a href="#" class="hover:text-[#dc2626] transition">Spaces</a>
+      <a href="#" class="hover:text-[#dc2626] transition">Properties</a>
+      <a href="#" class="hover:text-[#dc2626] transition">Projects</a>
+    </div>
+    <div class="flex gap-8">
+      <a href="#" class="hover:text-[#dc2626] transition">About Us</a>
+      <a href="#" class="hover:text-[#dc2626] transition">FAQ</a>
+      <a href="#" class="hover:text-[#dc2626] transition">Contact</a>
+    </div>
+  </div>
+
+  <!-- Mobile Header -->
+  <div class="flex items-center justify-between md:hidden">
+    <div class="text-lg font-bold">Logo</div>
+    <button @click="open = !open" class="focus:outline-none z-30">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path :class="{'hidden': open}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+        <path :class="{'hidden': !open}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="md:hidden" x-show="open" x-transition>
+    <div class="mt-6 flex flex-col gap-4 text-base bg-white text-black px-4 py-6 rounded shadow-lg">
+      <a href="#" class="hover:text-[#dc2626] transition">Spaces</a>
+      <a href="#" class="hover:text-[#dc2626] transition">Properties</a>
+      <a href="#" class="hover:text-[#dc2626] transition">Projects</a>
+      <a href="#" class="hover:text-[#dc2626] transition">About Us</a>
+      <a href="#" class="hover:text-[#dc2626] transition">FAQ</a>
+      <a href="#" class="hover:text-[#dc2626] transition">Contact</a>
+    </div>
+  </div>
+</nav>
+
+
+        <!-- Main Text -->
+        <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+            <h1 class="text-7xl md:text-8xl font-semibold tracking-wide uppercase text-primary">Yare Ltd</h1>
+            <p class="text-lg md:text-xl mt-6 font-medium text-gray-200">
+                Transforming Commercial Real Estate.<br />
+                With Vision. With Precision.
+            </p>
+        </div>
+
+        <!-- CTA -->
+        <div class="absolute bottom-12 w-full flex justify-center z-10">
+            <a href="#" class="text-white text-base font-medium border-b border-white hover:text-[#dc2626] transition">
+                Download our cabin catalogue
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-20 px-6 md:px-20 text-center bg-gray-100">
+        <h2 class="text-3xl font-semibold mb-6">About Yare Ltd</h2>
+        <p class="max-w-3xl mx-auto text-lg font-light">
+            We craft cabins that embrace local tradition while standing proudly in the modern world. Every structure
+            tells a story—of home, of nature, of timeless design.
+        </p>
+    </section>
+
+    <section class="flex flex-col md:flex-row items-center justify-center py-20 px-6 md:px-20 bg-white">
+        <!-- Image side -->
+        <div class="w-full md:w-1/2 mb-12 md:mb-0 md:mr-12">
+            <img src="brochure.png" alt="Catalog preview with cabin designs"
+                class="w-full h-[300px] rounded-lg shadow-lg object-cover">
+        </div>
+
+        <!-- Text side -->
+        <div class="w-full md:w-1/2 text-center md:text-left">
+            <h2 class="text-3xl md:text-4xl font-semibold mb-4">Download Our Catalogue</h2>
+            <p class="text-lg font-light mb-6">
+                Keep all the information close at hand. And feel free to reach out if you’d like a printed copy
+                delivered.
+            </p>
+            <a href="#"
+                class="inline-flex items-center text-base font-medium text-[#dc2626] border-b-2 border-[#dc2626] hover:text-black transition">
+                Learn more
+                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20 px-6 md:px-20">
+        <h2 class="text-3xl font-semibold text-center mb-12">Cabin Inspirations</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <img src="cabin1.jpg" alt="Cabin 1" class="w-full h-72 object-cover rounded-lg">
+            <img src="cabin2.jpg" alt="Cabin 2" class="w-full h-72 object-cover rounded-lg">
+            <img src="cabin3.jpg" alt="Cabin 3" class="w-full h-72 object-cover rounded-lg">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-6 md:px-20">
+        <div class="flex flex-col md:flex-row justify-between items-center text-sm font-light">
+            <p>&copy; 2025 Yare Ltd. All rights reserved.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-[#dc2626] transition">Privacy Policy</a>
+                <a href="#" class="hover:text-[#dc2626] transition">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
